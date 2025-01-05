@@ -4,7 +4,7 @@ pipeline {
         JDK_HOME = tool name: 'JDK 21', type: 'JDK'
     }
     tools {
-        maven 'Maven 3.8.5'
+        maven 'Maven 3.9.6'
     }
     stages {
         stage('Build') {
