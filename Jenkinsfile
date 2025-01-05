@@ -6,11 +6,13 @@ pipeline {
     }
     environment {
         JAVA_HOME = "${tool 'JDK 21'}"
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
     stages {
         stage('Verify Environment') {
             steps {
                 sh 'echo $JAVA_HOME'
+                sh 'echo $PATH'
                 sh 'java -version'
             }
         }
