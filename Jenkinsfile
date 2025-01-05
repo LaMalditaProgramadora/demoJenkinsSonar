@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        JDK_HOME = tool name: 'JDK 21', type: 'JDK'
+    }
     tools {
         maven 'Maven 3.8.5'
     }
